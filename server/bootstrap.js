@@ -1,5 +1,12 @@
 // if the database is empty on server start, create some sample data.
 Meteor.startup(function () {
+  // On Sandstorm, insert one list called "My List", then return
+  // to avoid inserting the full set of demo data.
+  if (process.env.SANDSTORM === "1") {
+    Lists.insert({name: "My List",
+        incompleteCount: 0});
+    return;
+  }
   if (Lists.find().count() === 0) {
     var data = [
       {name: "Meteor Principles",
