@@ -3,7 +3,9 @@
 This repository contains a simple todo app, made with Meteor.
 
 It comes from `meteor create --example todos` with slight changes for
-Sandstorm. You can see those changes by reading the git log.
+Sandstorm.
+
+To learn about the changes, read the [git log](https://github.com/paulproteus/meteor-todos-sandstorm/commits/master).
 
 ![screenshot](https://raw.github.com/paulproteus/meteor-todos-sandstorm/master/app-graphics/screenshot1.png)
 
