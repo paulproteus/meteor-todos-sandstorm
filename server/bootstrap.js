@@ -1,11 +1,19 @@
 // if the database is empty on server start, create some sample data.
 Meteor.startup(function () {
-  // On Sandstorm, insert one list called "My List", then return
-  // to avoid inserting the full set of demo data.
+  // On Sandstorm, create demo data differently.
   if (process.env.SANDSTORM === "1") {
-    Lists.insert({name: "My List",
-        incompleteCount: 0});
-    return;
+    var Fs = Npm.require('fs');
+    if (Fs.existsSync('/var/initialized')) {
+      return;
+    } else {
+      if (Lists.find().count() === 0) {
+        Lists.insert({
+          name: "My List",
+          incompleteCount: 0});
+      }
+      Fs.writeFileSync('/var/initialized', '', 'utf-8');
+      return;
+    }
   }
   if (Lists.find().count() === 0) {
     var data = [
