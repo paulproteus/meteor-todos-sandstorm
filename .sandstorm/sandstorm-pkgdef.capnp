@@ -17,11 +17,11 @@ const pkgdef :Spk.PackageDefinition = (
   manifest = (
     appTitle = (defaultText = "Simple Todos"),
     appMarketingVersion = (defaultText = "2015-10-30"),
-    appVersion = 3,  # Increment this for every release.
+    appVersion = 4,  # Increment this for every release.
 
     actions = [
       # Define your "new document" handlers here.
-      ( title = (defaultText = "New Todo List"),
+      ( nounPhrase = (defaultText = "list"),
         command = .myCommand
         # The command to run when starting for the first time. (".myCommand"
         # is just a constant defined at the bottom of the file.)
