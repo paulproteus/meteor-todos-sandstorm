@@ -16,8 +16,8 @@ const pkgdef :Spk.PackageDefinition = (
   # manifest, aka appMetadata.
   manifest = (
     appTitle = (defaultText = "Simple Todos"),
-    appMarketingVersion = (defaultText = "2015-10-28"),
-    appVersion = 2,  # Increment this for every release.
+    appMarketingVersion = (defaultText = "2015-10-30"),
+    appVersion = 3,  # Increment this for every release.
 
     actions = [
       # Define your "new document" handlers here.
